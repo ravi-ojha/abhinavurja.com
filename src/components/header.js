@@ -3,32 +3,41 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <section className="hero">
+    <section className="navigation">
+      <header>
+        <div className="header-content">
+          <div className="logo"><a href="#"><img src="./../assets/images/logo.png" alt="Logo"></img></a></div>
+          <div className="header-nav">
+            <nav>
+              <ul className="primary-nav">
+                <li><a href="#intro">How we met</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#instagram">Tag Us</a></li>
+              </ul>
+              <ul className="member-actions">
+                <li><a href="#rsvp" className="btn-white btn-small">RSVP</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div className="navicon">
+            <a className="nav-toggle" href="#"><span></span></a>
+          </div>
+        </div>
+      </header>
+    </section>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-10 col-md-offset-1">
+          <div className="hero-content text-center">
+            <img src="./../assets/images/logo-lg.png"></img>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
+    <div className="down-arrow floating-arrow"><a href="#invitation"><i className="fa fa-angle-down"></i></a></div>
+  </section>
 )
 
 Header.propTypes = {

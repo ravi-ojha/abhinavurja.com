@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "abhinavurja.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Urja & Abhinav's wedding website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ravi Ojha <ivarojha@gmail.com>",
   "dependencies": {
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
@@ -19,6 +19,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "gh-pages": "^1.2.0",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -28,6 +29,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "deploy": "gatsby build --prefix-paths && cp ./src/CNAME public/ && gh-pages -d public",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -35,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ravi-ojha/abhinavurja.com"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

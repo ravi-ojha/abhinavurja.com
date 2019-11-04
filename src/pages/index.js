@@ -1,20 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
+import { withPrefix, Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import MainNews from "../components/main-news"
+import HowWeMet from "../components/how-we-met"
+import Events from "../components/events"
+import Instagram from "../components/instagram"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <MainNews />
+    <HowWeMet />
+    <Events />
+    <Instagram />
   </Layout>
 )
 
