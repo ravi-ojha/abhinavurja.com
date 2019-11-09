@@ -32,6 +32,7 @@ const Header = ({ siteTitle }) => (
         <div className="col-md-10 col-md-offset-1">
           <div className="hero-content text-center">
             <img src="./../assets/images/logo-lg.png"></img>
+            <p className="font-lobster">Our paths unite <a href="https://instagram.com/explore/tags/udjaawithsharma/" target="_blank" style={{ color: '#fff' }}>#udjaawithsharma</a> </p>
           </div>
         </div>
       </div>

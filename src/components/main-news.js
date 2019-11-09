@@ -6,7 +6,7 @@ const MainNews = () => (
       <div className="row">
         <div className="col-md-12 text-center">
           <h3>We are getting married!</h3>
-          <p>The wedding's on 20<sup>th</sup> and reception on 25<sup>th</sup> of January '20 and we would like you to be a part of it.</p>
+          <p>The wedding's on 20<sup>th</sup> January '20 and we would like you to be a part of it.</p>
         </div>
       </div>
     </div>
