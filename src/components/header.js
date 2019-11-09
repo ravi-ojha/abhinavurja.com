@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
               <ul className="member-actions">
                 <li>
                   <div className="dropdown">
-                    <a href="#" className="btn-rsvp dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <a href="#" style={{ color: "#fff" }} className="btn-rsvp dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       RSVP
                       <span className="glyphicon glyphicon-menu-down" style={{ paddingLeft: "5px" }}></span>
                     </a>
