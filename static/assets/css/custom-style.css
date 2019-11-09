@@ -18,12 +18,9 @@ h2 {
   color: #bf9b30; }
 
 h3 {
+  font-family: 'Lobster', cursive;
   color: #bf9b30;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 29px; }
+  font-size: 24px; }
 
 h4 {
   font-size: 18px; }
@@ -33,57 +30,6 @@ h5 {
   color: #bf9b30;
   text-transform: uppercase;
   font-weight: 500; }
-
-.btn {
-  font-size: 13px;
-  border: solid 2px;
-  -moz-border-radius: 40px;
-  -webkit-border-radius: 40px;
-  border-radius: 40px;
-  display: inline-block;
-  text-transform: uppercase; }
-
-.btn:hover, .btn:focus {
-  color: #fff;
-  border-color: #bf9b30;
-  background-color: #bf9b30; }
-
-.btn-white {
-  font-size: 13px;
-  border: solid 2px;
-  -moz-border-radius: 40px;
-  -webkit-border-radius: 40px;
-  border-radius: 40px;
-  display: inline-block;
-  border-color: #fff; }
-
-.btn-white:hover, .btn-white:focus {
-  color: #bf9b30;
-  border-color: #bf9b30; }
-
-.btn-fill {
-  color: #fff;
-  border: solid 2px #bf9b30;
-  -moz-border-radius: 40px;
-  -webkit-border-radius: 40px;
-  border-radius: 40px;
-  display: inline-block;
-  text-transform: uppercase;
-  background-color: #bf9b30; }
-
-.btn-fill:hover, .btn-fill:focus {
-  color: #fff;
-  background-color: #d3b56a;
-  border-color: #d3b56a; }
-
-.btn-small {
-  padding: 8px 30px; }
-
-.btn-large {
-  padding: 15px 40px; }
-
-.btn-margin-right {
-  margin-right: 20px; }
 
 section.intro, section.features-extra, section.rsvp {
   background: #fff; }
@@ -393,8 +339,9 @@ header {
   transition: padding 300ms ease-in-out; }
   header a {
     color: #fff;
+    line-height: 2;
     text-transform: uppercase;
-    font-size: 13px; }
+    font-size: 14px; }
     header a.login {
       margin-right: 20px; }
   header .logo {
@@ -412,7 +359,11 @@ header {
         header ul.primary-nav li a:hover {
           border-bottom: 1px solid;
           padding-bottom: 4px;
-          line-height: 100%; }
+          line-height: 2;
+          -moz-transition: all 300ms ease-in-out;
+          -o-transition: all 300ms ease-in-out;
+          -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out; }
       header ul.primary-nav li:last-child a {
         padding-right: 0px; }
   header ul.member-actions li {
@@ -420,14 +371,15 @@ header {
     header ul.member-actions li a {
       color: #fff; }
       header ul.member-actions li a:hover {
-        color: #6d5800; }
+        color: #fff; }
   header .header-nav {
     font-weight: 700;
     display: inline-block; }
   header .member-actions {
     position: absolute;
+    font-weight: 700;
     right: 0;
-    top: 41px;
+    top: 50px;
     transition: all 300ms ease-in-out; }
 
 .down-arrow {
@@ -816,7 +768,7 @@ RSVP form
       transform: translateY(-50%);
       margin-left: 20px; }
     .rsvp .rsvp-form .form-input-group input {
-      padding-left: 68px;
+      padding-left: 20px;
       width: 100%;
       height: 100%;
       -moz-border-radius: 6px;
@@ -874,3 +826,56 @@ body.modal-open {
 
 .modal-body {
   padding: 25px; }
+
+.glyphicon.fast-right-spinner {
+  -webkit-animation: glyphicon-spin-r 1s infinite linear;
+  animation: glyphicon-spin-r 1s infinite linear;
+}
+
+@-webkit-keyframes glyphicon-spin-r {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+  }
+}
+
+@keyframes glyphicon-spin-r {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes glyphicon-spin-l {
+  0% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+}
+
+@keyframes glyphicon-spin-l {
+  0% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+}

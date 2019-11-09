@@ -7,17 +7,30 @@ const Header = ({ siteTitle }) => (
     <section className="navigation">
       <header>
         <div className="header-content">
-          <div className="logo"><a href="#"><img src="./../assets/images/logo.png" alt="Logo"></img></a></div>
+          <div className="logo">
+            <Link to="/"><img src="./../assets/images/logo.png" alt="Logo"></img></Link>
+          </div>
           <div className="header-nav">
             <nav>
               <ul className="primary-nav">
-                <li><a href="#intro">How we met</a></li>
-                <li><a href="#timeline">Timeline</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#instagram">Tag Us</a></li>
+                <li><a className="parallax-link" href="#intro">How we met</a></li>
+                <li><a className="parallax-link" href="#timeline">Timeline</a></li>
+                <li><a className="parallax-link" href="#events">Events</a></li>
+                <li><a className="parallax-link" href="#instagram">Tag Us</a></li>
               </ul>
               <ul className="member-actions">
-                <li><a href="#rsvp" className="btn-white btn-small">RSVP</a></li>
+                <li>
+                  <div className="dropdown">
+                    <a href="#" className="btn-rsvp dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      RSVP
+                      <span className="glyphicon glyphicon-menu-down" style={{ paddingLeft: "5px" }}></span>
+                    </a>
+                    <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                      <li><Link to="/rsvp-wedding/#rsvp-wedding-form" className="parallax-link">Wedding in Valsad</Link></li>
+                      <li><Link to="/rsvp-reception/#rsvp-reception-form" className="parallax-link">Post-wedding Reception</Link></li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
             </nav>
           </div>

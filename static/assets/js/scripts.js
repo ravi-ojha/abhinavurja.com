@@ -77,10 +77,9 @@ $(document).ready(function () {
         event.preventDefault();
     });
     /* When user clicks a link */
-    $('.header-nav li a').click(function () {
+    $('.header-nav li a.parallax-link').click(function () {
         $('.nav-toggle').toggleClass('active');
         $('.header-nav').toggleClass('open');
-
     });
 
     /***************** Header BG Scroll ******************/
@@ -96,7 +95,7 @@ $(document).ready(function () {
                     "padding": "35px 0"
                 });
                 $('header .member-actions').css({
-                    "top": "26px",
+                    "top": "35px",
                 });
                 $('header .navicon').css({
                     "top": "34px",
@@ -108,7 +107,7 @@ $(document).ready(function () {
                     "padding": "50px 0"
                 });
                 $('header .member-actions').css({
-                    "top": "41px",
+                    "top": "50px",
                 });
                 $('header .navicon').css({
                     "top": "48px",
@@ -152,26 +151,23 @@ $(document).ready(function () {
 
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
+        console.log("------------")
         e.preventDefault();
         var data = $(this).serialize();
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-        } else {
-            $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
-                .done(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html('');
-                    $('#rsvp-modal').modal('show');
-                })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-                });
-        }
+
+        // $.post('https://script.google.com/macros/s/AKfycbwzr7SReB9KOajsUd0OpZGjTRojZdAcwVjHwD4bHIxKwYDqYbA6/exec', data)
+        //     .done(function (data) {
+        //         console.log(data);
+        //         $('#alert-wrapper').html('');
+        //         $('#rsvp-modal').modal('show');
+        //     })
+        //     .fail(function (data) {
+        //         console.log(data);
+        //         $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+        //     });
     });
 
 });
