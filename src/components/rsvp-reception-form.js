@@ -40,13 +40,11 @@ class RsvpReceptionForm extends React.Component {
 
 
   handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value.trim() });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   onFormSubmit = (evt) => {
-    console.log("111111111");
     evt.preventDefault();
-    console.log("2222222222");
     this.setState({ loading: true });
 
     const validateEmailResponse = this.validateEmail(this.state.email);
@@ -54,14 +52,13 @@ class RsvpReceptionForm extends React.Component {
       this.setState({ errorMsg: validateEmailResponse.message, loading: false });
       return;
     }
-    console.log("3333333");
 
     const bodyFormData = new FormData();
     bodyFormData.set('email', this.state.email);
     bodyFormData.set('name', this.state.name);
     bodyFormData.set('totalMembers', this.state.totalMembers);
     bodyFormData.set('memberDetails', this.state.memberDetails);
-    return axios.post("https://script.google.com/macros/s/AKfycbwzr7SReB9KOajsUd0OpZGjTRojZdAcwVjHwD4bHIxKwYDqYbA6/exec", bodyFormData)
+    return axios.post("https://script.google.com/macros/s/AKfycbwoD-Egay2JGPgpO1KPazxOIS3cFhbWRMs-uvj2AN4uuyN_O4CE/exec", bodyFormData)
       .then((response) => {
         this.setState({ successMsg: "Thank you for joining us on our big day!", errorMsg: "", loading: false });
         console.log(response);
@@ -78,10 +75,10 @@ class RsvpReceptionForm extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-md-offset-3">
-              { this.state.successMsg && <div class="alert alert-success" role="alert">{this.state.successMsg}</div> }
+              { this.state.successMsg && <div className="alert alert-success" role="alert">{this.state.successMsg}</div> }
               <h3 className="text-center">What are you waiting for?</h3>
-              <p className="text-center">It would help us make your stay awesome if your RSVP before 15<sup>th</sup> December</p>
-              { this.state.errorMsg && <div class="alert alert-danger" role="alert">{this.state.errorMsg}</div> }
+              <p className="text-center">It would help us make your stay awesome if you RSVP before 15<sup>th</sup> December</p>
+              { this.state.errorMsg && <div className="alert alert-danger" role="alert">{this.state.errorMsg}</div> }
               <form id="rsvp-form" className="rsvp-form" action="" method="POST">
                 <div className="row">
                   <div className="col-md-12 col-sm-6">
@@ -156,7 +153,7 @@ class RsvpReceptionForm extends React.Component {
                       className="btn btn-primary btn-lg btn-block"
                       disabled
                     >
-                        <span class="glyphicon glyphicon-repeat fast-right-spinner"> </span> Processing
+                        <span className="glyphicon glyphicon-repeat fast-right-spinner"> </span> Processing
                     </button>
                   :
                     <button
