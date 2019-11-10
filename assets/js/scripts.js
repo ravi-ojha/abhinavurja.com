@@ -148,7 +148,6 @@ $(document).ready(function () {
         $('#map-content').toggleClass('toggle-map-content');
         $('#btn-show-content').toggleClass('toggle-map-content');
     });
-
 });
 
 /********************** Extras **********************/
