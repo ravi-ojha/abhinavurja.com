@@ -8,7 +8,7 @@ import Instagram from "../components/instagram"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="RSVP for the reception" />
     <RsvpReceptionForm />
     <Instagram />
   </Layout>

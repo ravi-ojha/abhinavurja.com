@@ -71,12 +71,12 @@ class RsvpWeddingForm extends React.Component {
 
   render() {
     return (
-      <section id="rsvp-reception-form" className="rsvp section-padding">
+      <section id="rsvp-wedding-form" className="rsvp section-padding">
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-md-offset-3">
               { this.state.successMsg && <div className="alert alert-success" role="alert">{this.state.successMsg}</div> }
-              <h3 className="text-center">What are you waiting for?</h3>
+              <h3 className="text-center">RSVP for the wedding!</h3>
               <p className="text-center">It would help us make your stay awesome if you RSVP before 15<sup>th</sup> December</p>
               { this.state.errorMsg && <div className="alert alert-danger" role="alert">{this.state.errorMsg}</div> }
               <form id="rsvp-form" className="rsvp-form" action="" method="POST">
