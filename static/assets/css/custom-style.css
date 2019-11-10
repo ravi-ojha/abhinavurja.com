@@ -369,9 +369,9 @@ header {
   header ul.member-actions li {
     display: inline; }
     header ul.member-actions li a {
-      color: #fff; }
-      header ul.member-actions li a:hover {
-        color: #fff; }
+      text-transform: none;
+      font-weight: 700;
+      color: #bf9b30; }
   header .header-nav {
     font-weight: 700;
     display: inline-block; }
@@ -826,6 +826,15 @@ body.modal-open {
 
 .modal-body {
   padding: 25px; }
+
+@media screen and (max-width: 990px) {
+  .dropdown-menu-right {
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    max-width: 330px;
+  }
+}
 
 .glyphicon.fast-right-spinner {
   -webkit-animation: glyphicon-spin-r 1s infinite linear;

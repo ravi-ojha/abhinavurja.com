@@ -827,6 +827,15 @@ body.modal-open {
 .modal-body {
   padding: 25px; }
 
+@media screen and (max-width: 990px) {
+  .dropdown-menu-right {
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    max-width: 330px;
+  }
+}
+
 .glyphicon.fast-right-spinner {
   -webkit-animation: glyphicon-spin-r 1s infinite linear;
   animation: glyphicon-spin-r 1s infinite linear;
