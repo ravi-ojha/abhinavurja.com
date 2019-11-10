@@ -90,10 +90,10 @@ class RsvpWeddingForm extends React.Component {
               { this.state.errorMsg && <div className="alert alert-danger" role="alert">{this.state.errorMsg}</div> }
               <div className="text-center">
                 <label className="radio-inline">
-                  <input type="radio" name="areYouComing" id="inlineRadio1" value="yes" checked={this.state.areYouComing === "yes"} onChange={this.handleChange} /> I am with you through this ordeal!
+                  <input type="radio" name="areYouComing" id="inlineRadio1" value="yes" checked={this.state.areYouComing === "yes"} onChange={this.handleChange} /> Yes, I am with you through this ordeal!
                 </label>
                 <label className="radio-inline">
-                  <input type="radio" name="areYouComing" id="inlineRadio2" value="no" checked={this.state.areYouComing === "no"} onChange={this.handleChange} /> You are on your own, guys
+                  <input type="radio" name="areYouComing" id="inlineRadio2" value="no" checked={this.state.areYouComing === "no"} onChange={this.handleChange} /> No, you are on your own, guys
                 </label>
               </div>
               {

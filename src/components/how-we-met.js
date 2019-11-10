@@ -1,7 +1,7 @@
 import React from "react"
 
 const HowWeMet = () => (
-  <section id="intro">
+  <section id="intro" className="events section-padding">
     <div className="container">
       <div className="row">
         <div className="col-md-12 text-center">

@@ -9,37 +9,69 @@ const Events = () => (
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6 col-sm-12 col-xs-12 leftcol">
-          <div>
-            <h5>Mehendi <span className="time">11:00 AM <strong>18<sup>th</sup> January</strong></span></h5>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+
+        <div id="timeline">
+
+          <div className="timeline-item">
+            <div className="timeline-icon"></div>
+            <div className="timeline-content right">
+              <h4>11:00 AM, 18 Jan 2020</h4>
+              <p style={{ fontWeight: "700", paddingBottom: "0", paddingTop: "10px", marginBottom: "0" }}>
+                Mehendi
+              </p>
+            </div>
           </div>
-          <div>
-            <h5>Ganpati-Matruka Sthapna <span className="time">9:00 AM <strong>19<sup>th</sup> January</strong></span></h5>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+          <div className="timeline-item">
+            <div className="timeline-icon"></div>
+            <div className="timeline-content left">
+              <h4>9:00 AM, 19 Jan 2020</h4>
+              <p style={{ fontWeight: "700", paddingBottom: "0", paddingTop: "10px", marginBottom: "0" }}>
+                Ganpati-Matruka Sthapna
+              </p>
+            </div>
           </div>
-          <div>
-            <h5>Haldi <span className="time">10:30 AM <strong>19<sup>th</sup> January</strong></span></h5>
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod facere possimus.</p>
+
+          <div className="timeline-item">
+            <div className="timeline-icon"></div>
+            <div className="timeline-content left">
+              <h4>10:30 AM, 19 Jan 2020</h4>
+              <p style={{ fontWeight: "700", paddingBottom: "0", paddingTop: "10px", marginBottom: "0" }}>
+                Haldi
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="col-md-6 col-sm-12 col-xs-12 rightcol">
-          <div>
-            <h5>Shagun <span className="time">6:00 PM <strong>19<sup>th</sup> January</strong></span></h5>
-            <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo.</p>
+
+          <div className="timeline-item">
+            <div className="timeline-icon"></div>
+            <div className="timeline-content left">
+              <h4>6:00 PM, 19 Jan 2020</h4>
+              <p style={{ fontWeight: "700", paddingBottom: "0", paddingTop: "10px", marginBottom: "0" }}>
+                Shagun
+              </p>
+            </div>
           </div>
-          <div>
-            <h5>Grah Shanti <span className="time">8:00 AM <strong>20<sup>th</sup> January</strong></span></h5>
-            <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod facere possimus.</p>
+
+          <div className="timeline-item">
+            <div className="timeline-icon"></div>
+            <div className="timeline-content right">
+              <h4>8:00 AM, 20 Jan 2020</h4>
+              <p style={{ fontWeight: "700", paddingBottom: "0", paddingTop: "10px", marginBottom: "0" }}>
+                Grah Shanti
+              </p>
+            </div>
           </div>
-          <div>
-            <h5>Wedding <span className="time">6:00 PM <strong>20<sup>th</sup> January</strong></span></h5>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+
+          <div className="timeline-item">
+            <div className="timeline-icon"></div>
+            <div className="timeline-content right">
+              <h4>6:00 PM, 20 Jan 2020</h4>
+              <p style={{ fontWeight: "700", paddingBottom: "0", paddingTop: "10px", marginBottom: "0" }}>
+                Wedding
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-xs-12 section-border section-padding">
+
         </div>
       </div>
     </div>
