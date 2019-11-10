@@ -226,7 +226,7 @@ class RsvpReceptionForm extends React.Component {
                           type="textarea"
                           name="details"
                           className=""
-                          placeholder="My spouse and our little one, Gohan"
+                          placeholder="Wishing you a lifetime of love and happiness."
                           value={this.state.details}
                           onChange={this.handleChange}
                           required
