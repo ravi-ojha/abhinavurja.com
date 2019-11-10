@@ -8,11 +8,12 @@ class RsvpWeddingForm extends React.Component {
       email: '',
       name: '',
       totalMembers: 1,
-      memberDetails: '',
+      details: '',
       successMsg: '',
       errorMsg: '',
       loading: false,
       response: '',
+      areYouComing: '',
     };
   }
 
@@ -54,18 +55,26 @@ class RsvpWeddingForm extends React.Component {
     }
 
     const bodyFormData = new FormData();
+    bodyFormData.set('yaynay', this.state.areYouComing);
     bodyFormData.set('email', this.state.email);
     bodyFormData.set('name', this.state.name);
-    bodyFormData.set('totalMembers', this.state.totalMembers);
-    bodyFormData.set('memberDetails', this.state.memberDetails);
+    if (this.state.areYouComing === "yes") {
+      bodyFormData.set('totalMembers', this.state.totalMembers);
+    } else {
+      bodyFormData.set('totalMembers', 0);
+    }
+
+    bodyFormData.set('details', this.state.details);
     return axios.post("https://script.google.com/macros/s/AKfycbwzr7SReB9KOajsUd0OpZGjTRojZdAcwVjHwD4bHIxKwYDqYbA6/exec", bodyFormData)
       .then((response) => {
-        this.setState({ successMsg: "Thank you for joining us on our big day!", errorMsg: "", loading: false });
-        console.log(response);
+        if (this.state.areYouComing === "yes") {
+          this.setState({ successMsg: "Thank you for joining us on our big day!", errorMsg: "", loading: false });
+        } else if (this.state.areYouComing === "no") {
+          this.setState({ successMsg: "Thank you for blessing us! We love you!", errorMsg: "", loading: false });
+        }
       })
       .catch((error) => {
         this.setState({ successMsg: "", errorMsg: "Whoops! There was some issue saving the data. Can you please try one more time after refreshing the page?", loading: false });
-        console.log(error);
       });
   };
 
@@ -79,92 +88,173 @@ class RsvpWeddingForm extends React.Component {
               <h3 className="text-center">RSVP for the wedding!</h3>
               <p className="text-center">It would help us make your stay awesome if you RSVP before 15<sup>th</sup> December</p>
               { this.state.errorMsg && <div className="alert alert-danger" role="alert">{this.state.errorMsg}</div> }
-              <form id="rsvp-form" className="rsvp-form" action="" method="POST">
-                <div className="row">
-                  <div className="col-md-12 col-sm-6">
-                    <label>Name</label>
-                    <div className="form-input-group">
-                      <input
-                        type="text"
-                        name="name"
-                        className=""
-                        placeholder="Goku"
-                        value={this.state.name}
-                        onChange={this.handleChange}
-                        required 
-                      />
+              <div className="text-center">
+                <label className="radio-inline">
+                  <input type="radio" name="areYouComing" id="inlineRadio1" value="yes" checked={this.state.areYouComing === "yes"} onChange={this.handleChange} /> I am with you through this ordeal!
+                </label>
+                <label className="radio-inline">
+                  <input type="radio" name="areYouComing" id="inlineRadio2" value="no" checked={this.state.areYouComing === "no"} onChange={this.handleChange} /> You are on your own, guys
+                </label>
+              </div>
+              {
+                this.state.areYouComing === "yes" &&
+                <form className="rsvp-form" action="" method="POST">
+                  <div className="row">
+                    <div className="col-md-12 col-sm-6">
+                      <label>Name</label>
+                      <div className="form-input-group">
+                        <input
+                          type="text"
+                          name="name"
+                          className=""
+                          placeholder="Goku"
+                          value={this.state.name}
+                          onChange={this.handleChange}
+                          required
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-12 col-sm-6">
-                    <label>Email</label>
-                    <div className="form-input-group">
-                      <input
-                        type="email"
-                        name="email"
-                        className=""
-                        placeholder="goku@kakarot.com"
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                        required 
-                      />
+                  <div className="row">
+                    <div className="col-md-12 col-sm-6">
+                      <label>Email</label>
+                      <div className="form-input-group">
+                        <input
+                          type="email"
+                          name="email"
+                          className=""
+                          placeholder="goku@kakarot.com"
+                          value={this.state.email}
+                          onChange={this.handleChange}
+                          required
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-12 col-sm-6">
-                    <label>Total members (including yourself)</label>
-                    <div className="form-input-group">
-                      <input
-                        type="number"
-                        name="totalMembers"
-                        className=""
-                        min="1"
-                        max="5"
-                        value={this.state.totalMembers}
-                        onChange={this.handleChange}
-                        required />
+                  <div className="row">
+                    <div className="col-md-12 col-sm-6">
+                      <label>Total members (including yourself)</label>
+                      <div className="form-input-group">
+                        <input
+                          type="number"
+                          name="totalMembers"
+                          className=""
+                          min="1"
+                          max="5"
+                          value={this.state.totalMembers}
+                          onChange={this.handleChange}
+                          required />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-12 col-sm-6">
-                    <label>Optional details</label>
-                    <div className="form-input-group">
-                      <input
-                        type="textarea"
-                        name="memberDetails"
-                        className=""
-                        placeholder="My spouse and our little one, Gohan"
-                        value={this.state.memberDetails}
-                        onChange={this.handleChange}
-                        required 
-                      />
+                  <div className="row">
+                    <div className="col-md-12 col-sm-6">
+                      <label>Optional details</label>
+                      <div className="form-input-group">
+                        <input
+                          type="textarea"
+                          name="details"
+                          className=""
+                          placeholder="My spouse and our little one, Gohan"
+                          value={this.state.details}
+                          onChange={this.handleChange}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-12" id="alert-wrapper"></div>
-                </div>
-                {
-                  this.state.loading ?
-                    <button
-                      className="btn btn-primary btn-lg btn-block"
-                      disabled
-                    >
-                        <span className="glyphicon glyphicon-repeat fast-right-spinner"> </span> Processing
-                    </button>
-                  :
-                    <button
-                      className="btn btn-primary btn-lg btn-block"
-                      onClick={this.onFormSubmit}
-                    >
-                        { this.state.totalMembers > 1 ? "Count us in!" : "Count me in!" }
-                    </button>
-                }
-                
-              </form>
+                  <div className="row">
+                    <div className="col-md-12" id="alert-wrapper"></div>
+                  </div>
+                  {
+                    this.state.loading ?
+                      <button
+                        className="btn btn-primary btn-lg btn-block"
+                        disabled
+                      >
+                          <span className="glyphicon glyphicon-repeat fast-right-spinner"> </span> Processing
+                      </button>
+                    :
+                      <button
+                        className="btn btn-primary btn-lg btn-block"
+                        onClick={this.onFormSubmit}
+                      >
+                          { this.state.totalMembers > 1 ? "Count us in!" : "Count me in!" }
+                      </button>
+                  }
+                </form>
+              }
+              {
+                this.state.areYouComing === "no" &&
+                <form className="rsvp-form" action="" method="POST">
+                  <div className="row">
+                    <div className="col-md-12 col-sm-6">
+                      <label>Name</label>
+                      <div className="form-input-group">
+                        <input
+                          type="text"
+                          name="name"
+                          className=""
+                          placeholder="Goku"
+                          value={this.state.name}
+                          onChange={this.handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12 col-sm-6">
+                      <label>Email</label>
+                      <div className="form-input-group">
+                        <input
+                          type="email"
+                          name="email"
+                          className=""
+                          placeholder="goku@kakarot.com"
+                          value={this.state.email}
+                          onChange={this.handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12 col-sm-6">
+                      <label>Blessings</label>
+                      <div className="form-input-group">
+                        <input
+                          type="textarea"
+                          name="details"
+                          className=""
+                          placeholder="My spouse and our little one, Gohan"
+                          value={this.state.details}
+                          onChange={this.handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12" id="alert-wrapper"></div>
+                  </div>
+                  {
+                    this.state.loading ?
+                      <button
+                        className="btn btn-primary btn-lg btn-block"
+                        disabled
+                      >
+                          <span className="glyphicon glyphicon-repeat fast-right-spinner"> </span> Sending
+                      </button>
+                    :
+                      <button
+                        className="btn btn-primary btn-lg btn-block"
+                        onClick={this.onFormSubmit}
+                      >
+                          Send blessings!
+                      </button>
+                  }
+                </form>
+              }
             </div>
           </div>
         </div>

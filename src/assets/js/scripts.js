@@ -148,27 +148,6 @@ $(document).ready(function () {
         $('#map-content').toggleClass('toggle-map-content');
         $('#btn-show-content').toggleClass('toggle-map-content');
     });
-
-    /********************** RSVP **********************/
-    $('#rsvp-form').on('submit', function (e) {
-        console.log("------------")
-        e.preventDefault();
-        var data = $(this).serialize();
-
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-
-
-        // $.post('https://script.google.com/macros/s/AKfycbwzr7SReB9KOajsUd0OpZGjTRojZdAcwVjHwD4bHIxKwYDqYbA6/exec', data)
-        //     .done(function (data) {
-        //         console.log(data);
-        //         $('#alert-wrapper').html('');
-        //         $('#rsvp-modal').modal('show');
-        //     })
-        //     .fail(function (data) {
-        //         console.log(data);
-        //         $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-        //     });
-    });
 });
 
 /********************** Extras **********************/
