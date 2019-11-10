@@ -696,7 +696,7 @@ Embed video
 Google map
 ========================================================================== */
 #map-canvas {
-  height: 500px;
+  height: 450px;
   width: 100%; }
 
 #map-content-wrapper {

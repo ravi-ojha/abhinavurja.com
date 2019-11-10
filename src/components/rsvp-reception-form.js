@@ -71,7 +71,7 @@ class RsvpReceptionForm extends React.Component {
 
   render() {
     return (
-      <section id="rsvp-reception-form" className="rsvp section-padding">
+      <section id="rsvp-reception-form" className="rsvp">
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-md-offset-3">
