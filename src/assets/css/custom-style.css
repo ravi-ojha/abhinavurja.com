@@ -1005,7 +1005,35 @@ body.modal-open {
 }
 
 #timeline .timeline-item .timeline-content.right {
-	float: right
+	float: right;
+}
+
+#timeline .timeline-item .timeline-content.right .icon-content {
+	float: left;
+}
+
+#timeline .timeline-item .timeline-content.right .icon-content img {
+	float: left;
+}
+
+#timeline .timeline-item .timeline-content.right .icon-content p {
+	float: left;
+}
+
+#timeline .timeline-item .timeline-content.left {
+	float: left;
+}
+
+#timeline .timeline-item .timeline-content.left .icon-content {
+	float: right;
+}
+
+#timeline .timeline-item .timeline-content.left .icon-content img {
+	float: right;
+}
+
+#timeline .timeline-item .timeline-content.left .icon-content p {
+	float: right;
 }
 
 #timeline .timeline-item .timeline-content.right p {
@@ -1042,8 +1070,25 @@ body.modal-open {
 	}
 	#timeline .timeline-item .timeline-content {
 		width: 90%;
-		float: right
+		float: right;
   }
+
+  #timeline .timeline-item .timeline-content.left {
+    float: right;
+  }
+
+  #timeline .timeline-item .timeline-content.left .icon-content {
+    float: left;
+  }
+  
+  #timeline .timeline-item .timeline-content.left .icon-content img {
+    float: left;
+  }
+  
+  #timeline .timeline-item .timeline-content.left .icon-content p {
+    float: left;
+  }
+
   #timeline .timeline-item .timeline-content.right p {
     text-align: left;
   }
