@@ -16,6 +16,7 @@ const Header = ({ siteTitle }) => (
                 <li><a className="parallax-link" href="#timeline">Timeline</a></li>
                 <li><a className="parallax-link" href="#events">Events</a></li>
                 <li><a className="parallax-link" href="#instagram">Tag Us</a></li>
+                <li><a className="parallax-link" href="#venue">Venue</a></li>
               </ul>
               <ul className="member-actions">
                 <li>

@@ -3,7 +3,7 @@ import { withPrefix, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import MainNews from "../components/main-news"
-import HowWeMet from "../components/how-we-met"
+import Venue from "../components/venue"
 import Timeline from "../components/timeline"
 import Events from "../components/events"
 import Instagram from "../components/instagram"
@@ -17,6 +17,7 @@ const IndexPage = () => (
     <Timeline />
     <Events />
     <Instagram />
+    <Venue />
   </Layout>
 )
 
