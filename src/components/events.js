@@ -10,7 +10,7 @@ const Events = () => (
       </div>
       <div className="row">
 
-        <div id="timeline">
+        <div id="timeline-events">
 
           <div className="timeline-item">
             <div className="timeline-icon"></div>
