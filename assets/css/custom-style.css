@@ -23,7 +23,7 @@ h2 {
 h3 {
   font-family: 'Lobster', cursive;
   color: #bf9b30;
-  font-size: 24px; }
+  font-size: 32px; }
 
 h4 {
   font-size: 18px; }
@@ -1114,4 +1114,25 @@ body.modal-open {
 	#timeline .timeline-item .timeline-icon {
 		left: 0
 	}
+}
+
+/* Timer CSS */
+
+.timer-elem {
+  display: inline-block;
+}
+
+.timer-elem-divider {
+  display: inline-block;
+}
+
+.timer-value {
+  color: #bf9b30;
+  font-size: 42px;
+  min-width: 80px;
+  font-family: 'Lobster', cursive;
+}
+
+.timer-label {
+  font-size: 12px;
 }
