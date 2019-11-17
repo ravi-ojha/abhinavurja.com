@@ -97,7 +97,7 @@ const MainNews = () => (
         <div className="row">
           <div className="col-md-12 text-center">
             <Countdown
-              date={Date.now() + 5737586130}
+              date={new Date(2020, 0, 20)}
               renderer={renderer}
             />
           </div>
