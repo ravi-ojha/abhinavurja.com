@@ -1382,3 +1382,9 @@ body.modal-open {
   background-color: #219fff;
   border-color: #219fff;
 }
+
+.jumptarget::before {
+  content: "";
+  display: block;
+  height: 100px;
+}
