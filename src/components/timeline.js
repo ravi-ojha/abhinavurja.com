@@ -1,7 +1,7 @@
 import React from "react"
 
 const Timeline = () => (
-  <section id="intro">
+  <section id="timeline-scroll" className="jumptarget">
     <div className="container">
       <div className="row">
         <div className="col-md-12 text-center">

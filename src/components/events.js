@@ -1,7 +1,7 @@
 import React from "react"
 
 const Events = () => (
-  <section className="events section-padding" id="events">
+  <section className="events jumptarget" id="events">
     <div className="container">
       <div className="row">
         <div className="col-md-12 text-center">

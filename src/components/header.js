@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
           <div className="header-nav">
             <nav>
               <ul className="primary-nav">
-                <li><a className="parallax-link" href="#timeline">Timeline</a></li>
+                <li><a className="parallax-link" href="#timeline-scroll">Timeline</a></li>
                 <li><a className="parallax-link" href="#events">Events</a></li>
                 <li><a className="parallax-link" href="#instagram">Tag Us</a></li>
                 <li><a className="parallax-link" href="#venue">Venue</a></li>

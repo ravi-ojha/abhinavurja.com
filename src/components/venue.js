@@ -3,7 +3,7 @@ import EmbeddedGoogleMap from "../components/gmap"
 
 
 const Venue = () => (
-  <div id="venue">
+  <div id="venue" className="jumptarget">
     <section className="section-padding">
       <div className="container">
         <div className="row">

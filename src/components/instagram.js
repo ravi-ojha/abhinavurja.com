@@ -1,7 +1,7 @@
 import React from "react"
 
 const Instagram = () => (
-  <section id="instagram" className="section-padding">
+  <section id="instagram" className="jumptarget">
     <div className="container">
       <div className="row">
         <div className="col-md-12 text-center">

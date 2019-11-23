@@ -82,7 +82,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 
 const MainNews = () => (
   <>
-    <section id="invitation" className="section-padding">
+    <section id="invitation" className="section-padding jumptarget">
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
