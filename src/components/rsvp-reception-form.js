@@ -85,7 +85,6 @@ class RsvpReceptionForm extends React.Component {
           <div className="row">
             <div className="col-md-6 col-md-offset-3">
               <h3 className="text-center">RSVP for the reception!</h3>
-              <p className="text-center">It would help us make your stay awesome if you RSVP before 25<sup>th</sup> November</p>
               { this.state.successMsg && <div className="alert alert-success" role="alert">{this.state.successMsg}</div> }
               { this.state.errorMsg && <div className="alert alert-danger" role="alert">{this.state.errorMsg}</div> }
               <div className="text-center">
